@@ -1,1 +1,0 @@
-/Users/sean/.bash_profile
