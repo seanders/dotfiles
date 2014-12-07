@@ -1,0 +1,36 @@
+[user]
+	name = slicebo123
+	email = slicebo123@gmail.com
+[core]
+	autocrlf = input
+	safecrlf = true
+
+[credential]
+	helper = osxkeychain
+[alias]
+  ll = log \
+  --graph \
+  --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an - %cr)' \
+  --date=relative
+ 
+  ba = branch --all
+  co = checkout
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+ 
+[color "branch"]
+  current = yellow
+
+[push]
+  default = tracking
+ 
+[rebase]
+  autosquash = true
+ 
+[branch]
+  autosetupmerge = true
+[url "https://"]
+	insteadOf = git://
