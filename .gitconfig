@@ -1,36 +1,55 @@
 [user]
-	name = slicebo123
+	name = Sean Miller
 	email = slicebo123@gmail.com
+
 [core]
 	autocrlf = input
 	safecrlf = true
+  excludesfile = /Users/sean/.gitignore_global
 
 [credential]
 	helper = osxkeychain
+
+[merge]
+  tool = opendiff
+  ff = false
+
 [alias]
   ll = log \
   --graph \
   --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an - %cr)' \
   --date=relative
- 
-  ba = branch --all
+
+  hist = log --pretty=format:\"%h | %ad | %s %Cgreen[%an]%Creset%Cred%d%Creset\" --graph --date=short
+  st = status -sb
+  d = diff
+  dc = diff --cached
   co = checkout
+  br = branch
+  yolo = push -f origin HEAD
+  ap = add -p
+  ci = commit
 
 [color]
   diff = auto
   status = auto
   branch = auto
- 
+
 [color "branch"]
   current = yellow
 
 [push]
-  default = tracking
- 
+  default = simple
+
 [rebase]
   autosquash = true
- 
+
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
+
 [branch]
   autosetupmerge = true
+
 [url "https://"]
 	insteadOf = git://
