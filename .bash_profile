@@ -3,7 +3,7 @@ export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source $GITAWAREPROMPT/main.sh
 
 # Fancify my command line so its colorful
-export PS1="\[\e[0;32m\][\uders] \[\e[0;33m\]\w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+export PS1="\[\e[0;32m\][\u] \[\e[0;33m\]\w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 
 # TODO: This seems like overkill.
 export PATH=/Applications/Postgres.app/Contents/Versions/9.3/bin:./node_modules/.bin:~/bin:/usr/local/bin:/usr/local/git/bin:/usr/ctags:$PATH
