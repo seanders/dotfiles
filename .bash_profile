@@ -18,7 +18,7 @@ alias z="zeus"
 # Simple HTTP server alias
 alias server="python -m SimpleHTTPServer"
 
-aliase be="bundle exec"
+alias be="bundle exec"
 
 # Initialize rbenv
 eval "$(rbenv init -)"
