@@ -9,7 +9,7 @@ export PS1="\[\e[0;32m\][\uders] \[\e[0;33m\]\w \[$txtcyn\]\$git_branch\[$txtred
 export PATH=/Applications/Postgres.app/Contents/Versions/9.3/bin:./node_modules/.bin:~/bin:/usr/local/bin:/usr/local/git/bin:/usr/ctags:$PATH
 
 # TODO: This seems a bit uncessary
-subl='/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'
+# subl='/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'
 test -x "$subl" && export EDITOR="'$subl' --wait"
 
 # zeus alias
@@ -17,6 +17,8 @@ alias z="zeus"
 
 # Simple HTTP server alias
 alias server="python -m SimpleHTTPServer"
+
+aliase be="bundle exec"
 
 # Initialize rbenv
 eval "$(rbenv init -)"

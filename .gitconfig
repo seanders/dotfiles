@@ -1,9 +1,10 @@
 [user]
 	name = Sean Miller
 	email = slicebo123@gmail.com
+	signingkey = 2EB201C63275E352
 
 [core]
-	autocrlf = input
+	autocrlf = false
 	safecrlf = true
   excludesfile = /Users/sean/.gitignore_global
 
@@ -12,13 +13,18 @@
 
 [merge]
   tool = opendiff
-  ff = false
 
 [alias]
   ll = log \
   --graph \
   --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an - %cr)' \
   --date=relative
+
+  proddiff = !git diff \
+  --name-only `git rev-list -n 1 \\`git tag --list | grep production- | tail -1\\``
+
+  prodlogs = !git log --decorate --oneline --graph \
+  master...`git rev-list -n 1 \\`git tag --list | grep production- | tail -1\\``
 
   hist = log --pretty=format:\"%h | %ad | %s %Cgreen[%an]%Creset%Cred%d%Creset\" --graph --date=short
   st = status -sb
@@ -53,3 +59,6 @@
 
 [url "https://"]
 	insteadOf = git://
+
+[mergetool]
+  keepBackup = false
